@@ -43,13 +43,14 @@ def getDefnition(word):
     except:
         return "No definition found for '%s'" % word
 
-highest = find_largest_anagram(letter_generation.getLettersArray())
+#highest = find_largest_anagram(letter_generation.getLettersArray())
 
-print "Highest Anagram(s): " + str(highest)
+#print "Highest Anagram(s): " + str(highest)
 
-strhighest = highest.pop()
+#strhighest = highest.pop()
 
-print getDefnition(strhighest)
+#print getDefnition(strhighest)
+
 s = """\
 from __main__ import find_largest_anagram
 from __main__ import letter_generation

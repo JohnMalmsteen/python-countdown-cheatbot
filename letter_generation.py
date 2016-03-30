@@ -3,7 +3,7 @@ import random
 
 # based on the scrabble frequencies
 vowels = 'aaaaaaaaaeeeeeeeeeeeeiiiiiiiiioooooooouuuu'
-consonants = 'qwwrrrrrrttttttyyppssssddddffgggjkllllzxccvvbbnnnnnnmm'
+consonants = 'bbccddddffgggjkllllmmnnnnnnppqrrrrrrssssttttttvvwwxyyz'
 
 def getRandomLetter(selector):
     if selector == 0:
