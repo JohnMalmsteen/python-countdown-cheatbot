@@ -7,7 +7,11 @@ file = open('words/354984si.ngl', 'r')
 for line in file:
     line = line.strip()
     if len(line) > 3 and len(line) < 10 and line.isalpha() and line[0].islower():
-        dictionary[''.join(sorted(line))] = line
+        myKey = ''.join(sorted(line))
+        if dictionary.has_key(myKey):
+            dictionary[myKey].add(line)
+        else:
+            dictionary[myKey] = set([line])
 file.close()
 
 def checkword(inputword):
@@ -16,35 +20,23 @@ def checkword(inputword):
     else:
         return False
 
-class Queue:
-    def __init__(self):
-        self.elements = []
-
-    def isEmpty(self):
-        return self.elements == []
-
-    def offer(self, elem):
-        self.elements.insert(0, elem)
-
-    def poll(self):
-        return self.elements.pop()
-
-    def count(self):
-        return len(self.elements)
-
-
 def find_largest_anagram(inputword):
-    queue = Queue()
-    print "Input Letters: " + inputword
-
+    ##print "Input Letters: " + inputword
     for index in reversed(range(3,len(inputword)+1)):
-        map(queue.offer, itertools.combinations(inputword, index))
+        combos = itertools.combinations(inputword, index)
+        for combo in combos:
+            result = checkword(''.join(combo))
+            if result != False:
+                return result
 
-    while queue.isEmpty() == False:
-        result = checkword(''.join(queue.poll()))
-        if result != False:
-            return result
     return "No Anagrams Found"
 
+print "Highest Anagram: " + str(find_largest_anagram(letter_generation.getLettersArray()))
 
-print "Highest Anagram: " + find_largest_anagram(letter_generation.getLettersArray())
+s = """\
+from __main__ import find_largest_anagram
+from __main__ import letter_generation
+"""
+if __name__ == '__main__':
+    import timeit
+    print (timeit.timeit("find_largest_anagram(letter_generation.getLettersArray())", setup=s, number=10000 ))

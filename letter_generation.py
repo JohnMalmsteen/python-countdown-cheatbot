@@ -1,11 +1,9 @@
 import string
 import random
 
-vowels = 'aeiou'
-consonants = 'bcdfghjklmnpqrstvwxyz'
+vowels = 'aaaaaaaaaeeeeeeeeeeeeiiiiiiiiioooooooouuuu'
+consonants = 'qwwrrrrrrttttttyyppssssddddffgggjkllllzxccvvbbnnnnnnmm'
 
-
-# todo: select letters by natural frequency
 def getRandomLetter(selector):
     if selector == 0:
         return random.choice(consonants)
