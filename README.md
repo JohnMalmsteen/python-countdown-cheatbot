@@ -44,7 +44,7 @@ The sort algorithm used by python here is Timsort which is a stable (the output 
 
 Should there not be a nine letter anagram in the dictionary for our random letters then it is required to try and find an 8 letter anagram and failing that, 7 and so on and so forth.
 
-Since these substrings are to be sorted it is only required that the combinations of the letters be produced. For any given 9 letter string given the maximum number of combinations that must be checked against the dictionary is C(9, 9) + C(9, 8) + C(9, 7) + C(9, 6) + C(9, 5) + C(9, 4) = 381 although it is rare that an anagram isn't found at length 6. Since we are looking for the largest anagram it obviously makes sense to start from the longest combination and work down.
+Since these substrings are to be sorted it is only required that the combinations of the letters be produced. For any given 9 letter string given the maximum number of combinations that must be checked against the dictionary is C(9, 9) + C(9, 8) + C(9, 7) + C(9, 6) + C(9, 5) + C(9, 4) = 381 although it is rare that an anagram isn't found before length 6 and 252 of these combinations are at lengths 4 and 5. Since we are looking for the largest anagram it obviously makes sense to start from the longest combination and work down.
 
 To produce these combinations I used [itertools.combinations(iterable, r)](https://docs.python.org/2/library/itertools.html#itertools.combinations)
 
