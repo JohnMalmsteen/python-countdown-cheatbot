@@ -1,20 +1,20 @@
 import letter_generation
 import itertools
 
+dictionary = dict()
 
+file = open('words/354984si.ngl', 'r')
+for line in file:
+    line = line.strip()
+    if len(line) > 3 and len(line) < 10 and line.isalpha() and line[0].islower():
+        dictionary[''.join(sorted(line))] = line
+file.close()
 
 def checkword(inputword):
-    file = open('words/354984si.ngl', 'r')
-    inputword = ''.join(sorted(inputword))
-    for line in file:
-        line = line.strip()
-        if len(line) > 3 and len(line) < 10 and line.isalpha() and line[0].islower():
-            if ''.join(sorted(line)) == inputword:
-                file.close()
-                return True
-    file.close()
-    return False
-
+    if dictionary.has_key(''.join(sorted(inputword))):
+        return dictionary[''.join(sorted(inputword))]
+    else:
+        return False
 
 class Queue:
     def __init__(self):
@@ -35,12 +35,16 @@ class Queue:
 
 def find_largest_anagram(inputword):
     queue = Queue()
+    print "Input Letters: " + inputword
 
-    for index in reversed(range(4,len(inputword)+1)):
+    for index in reversed(range(3,len(inputword)+1)):
         map(queue.offer, itertools.combinations(inputword, index))
 
     while queue.isEmpty() == False:
-        print checkword(''.join(queue.poll()))
+        result = checkword(''.join(queue.poll()))
+        if result != False:
+            return result
+    return "No Anagrams Found"
 
 
-find_largest_anagram("aardvark")
+print "Highest Anagram: " + find_largest_anagram(letter_generation.getLettersArray())
