@@ -31,8 +31,25 @@ def find_largest_anagram(inputword):
 
     return "No Anagrams Found"
 
-print "Highest Anagram: " + str(find_largest_anagram(letter_generation.getLettersArray()))
+def getDefnition(word):
+    import urllib
+    import json
+    url = "http://dictionaryapi.net/api/definition/%s" % word
+    data = json.load(urllib.urlopen(url))
+    try:
+        result = str(data[0]['Definitions'])
+        result = "Definition: " + result[3:-2]
+        return result
+    except:
+        return "No definition found for '%s'" % word
 
+highest = find_largest_anagram(letter_generation.getLettersArray())
+
+print "Highest Anagram(s): " + str(highest)
+
+strhighest = highest.pop()
+
+print getDefnition(strhighest)
 s = """\
 from __main__ import find_largest_anagram
 from __main__ import letter_generation
