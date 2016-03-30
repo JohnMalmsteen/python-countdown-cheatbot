@@ -25,4 +25,4 @@ def instantiateLetterTypes(x):
 
 
 def getLettersArray():
-    return map(getRandomLetter, instantiateLetterTypes(random.randint(0,2)))
+    return ''.join(map(getRandomLetter, instantiateLetterTypes(random.randint(0,2))))
