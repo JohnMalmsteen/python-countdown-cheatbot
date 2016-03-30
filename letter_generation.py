@@ -1,6 +1,7 @@
 import string
 import random
 
+# based on the scrabble frequencies
 vowels = 'aaaaaaaaaeeeeeeeeeeeeiiiiiiiiioooooooouuuu'
 consonants = 'qwwrrrrrrttttttyyppssssddddffgggjkllllzxccvvbbnnnnnnmm'
 
@@ -16,9 +17,9 @@ def getRandomLetter(selector):
 # here I use 0 to represent consonants and 1s to represent vowels
 def instantiateLetterTypes(x):
     return {
-        0:[0,0,0,0,0,0,1,1,1],
-        1:[0,0,0,0,0,1,1,1,1],
-        2:[0,0,0,0,1,1,1,1,1],
+        0:[1,1,1,0,0,0,0,0,0],
+        1:[1,1,1,1,0,0,0,0,0],
+        2:[1,1,1,1,1,0,0,0,0],
     }.get(x)
 
 
