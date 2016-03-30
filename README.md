@@ -28,7 +28,7 @@ The players are limited to the words in the Oxford English Dictionary with some 
 ---
 The word list I used is the "Moby Word Lists by Grady Ward" which I have had for a while and I'm not sure where I got it from (I think it might be packaged with Kali Linux). I was going to use the /usr/share/dict/words list that exists on OSX (and almost all linux distribution) but I found it to be a bit limited compared to the Moby List.
 
-The Moby list is available [here](http://www.gutenberg.org/files/3201/files/ "Moby Word List"), the particular file that I am using is the 354,984 single words list.
+The Moby list is available [here](http://www.gutenberg.org/files/3201/files/ "Moby Word List"), although this is not the exact version that I have. The particular file that I am using is the 354,984 single words list.
 
 I strip the list of any words that are shorter than 4 (as that is one of the rules of countdown) and greater than 9, I also remove any word that has a capital first letter as it is a proper noun, and any word that has non alphabetical characters such as hyphens or apostrophes.
 
