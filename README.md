@@ -22,7 +22,7 @@ The players are limited to the words in the Oxford English Dictionary with some 
 
 >Standard inflections of nouns and verbs—for example, escapes, escaped and escaping—are accepted even though not explicitly shown in the dictionary. Comparative and superlative forms of monosyllabic adjectives—for example, greater and greatest—are valid although these too are not explicitly shown. For longer adjectives, the inflections must be stated explicitly.[48] However, some words given in the dictionary are not permitted: proper nouns (Kurdistan), hyphenated words (re-embark), some plurals of mass nouns (mankinds), and words that occur only in combination—for example, mistle is invalid as it is used only in mistle thrush. Also, only British spelling is permitted—American spellings and inflections, such as flavor and signaled, are invalid.
 
-[Source:](https://en.wikipedia.org/wiki/Countdown_(game_show)#cite_note-rulesref-44)
+[Source](https://en.wikipedia.org/wiki/Countdown_(game_show))
 
 2 - Word List
 ---
@@ -57,3 +57,5 @@ The API I used is located [here](dictionaryapi.net)
 5 - Testing
 ---
 Running the timeit function 10,000 on the find_largest_anagram() feeding it in the randomly generated 9 letter strings takes .68 seconds, so one solution takes about .000068 seconds although obviously this does not call the rest API and the pre-processing is done in advance.
+
+<a href="https://github.com/JohnMalmsteen"><img src="https://avatars1.githubusercontent.com/u/7085486?v=3&s=400" width="100px" height="100px" title="John" alt="John Image"/></a>
