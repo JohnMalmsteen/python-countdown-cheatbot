@@ -9,6 +9,7 @@ Contents:
 2. Word List
 3. Algorithm
 4. Extras
+5. Testing
 
 1 - About
 ---
