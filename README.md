@@ -54,6 +54,8 @@ I got tired of not knowing what any of the words meant so I threw in a function 
 
 The API I used is located [here](dictionaryapi.net)
 
+I also set up the solver as a webapp, the code for which is in app.py. It is hosted at [tsubatai.pythonanywhere.com/solve/<letters>](http://tsubatai.pythonanywhere.com/solve/teltres)
+
 5 - Testing
 ---
 Running the timeit function 10,000 on the find_largest_anagram() feeding it in the randomly generated 9 letter strings takes .68 seconds, so one solution takes about .000068 seconds although obviously this does not call the rest API and the pre-processing is done in advance.
