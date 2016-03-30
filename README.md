@@ -56,6 +56,12 @@ The API I used is located [here](dictionaryapi.net)
 
 I also set up the solver as a webapp, the code for which is in app.py. It is hosted at [tsubatai.pythonanywhere.com/solve/<letters>](http://tsubatai.pythonanywhere.com/solve/teltres)
 
+### Routes
+Route | HTTP Method | Description | Return
+---------|------------|------------|------------
+/ | GET | Basic API route (no functionality) | Welcome to the Countdown Solver API
+/solve/<letters> | GET | Sole functional route, takes letters as a parameter and fins highest scoring anagrams | {"anagrams":["trestle","sterlet","settler","letters"]} (for parameter teltres)
+
 5 - Testing
 ---
 Running the timeit function 10,000 on the find_largest_anagram() feeding it in the randomly generated 9 letter strings takes .68 seconds, so one solution takes about .000068 seconds although obviously this does not call the rest API and the pre-processing is done in advance.
