@@ -54,13 +54,13 @@ I got tired of not knowing what any of the words meant so I threw in a function 
 
 The API I used is located [here](dictionaryapi.net)
 
-I also set up the solver as a webapp, the code for which is in app.py. It is hosted at [tsubatai.pythonanywhere.com/solve/<letters>](http://tsubatai.pythonanywhere.com/solve/teltres)
+I also set up the solver as a webapp, the code for which is in app.py. It is hosted at [tsubatai.pythonanywhere.com/solve/:letters](http://tsubatai.pythonanywhere.com/solve/teltres)
 
 ### Routes
 Route | HTTP Method | Description | Return
 ---------|------------|------------|------------
 / | GET | Basic API route (no functionality) | Welcome to the Countdown Solver API
-/solve/<letters> | GET | Sole functional route, takes letters as a parameter and fins highest scoring anagrams | {"anagrams":["trestle","sterlet","settler","letters"]} (for parameter teltres)
+/solve/:letters | GET | Sole functional route, takes letters as a parameter and fins highest scoring anagrams | {"anagrams":["trestle","sterlet","settler","letters"]} (for parameter teltres)
 
 5 - Testing
 ---
