@@ -63,12 +63,12 @@ This can be tested with
 $ python countdown_solver.py <letters>
   ```
 
-I also set up the solver as a webapp, the code for which is in app.py. It is hosted at [tsubatai.pythonanywhere.com/solve/:letters](http://tsubatai.pythonanywhere.com/solve/teltres)
+I also set up the solver as a webapp, the code for which is in app.py. It is hosted at [tsubatai.pythonanywhere.com/](http://tsubatai.pythonanywhere.com/) and has a REST API serving it from [here](http://tsubatai.pythonanywhere.com/solve/eettlrs)
 
 ### Routes
 Route | HTTP Method | Description | Return
 ---------|------------|------------|------------
-/ | GET | Basic API route (no functionality) | Welcome to the Countdown Solver API
+/ | GET | Returns the Homepage View template | Webapp Main Page
 /solve/:letters | GET | Sole functional route, takes letters as a parameter and fins highest scoring anagrams | {"anagrams":["trestle","sterlet","settler","letters"]} (for parameter teltres)
 
 5 - Testing
