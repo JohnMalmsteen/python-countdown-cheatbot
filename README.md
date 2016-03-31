@@ -31,7 +31,9 @@ The word list I used is the "Moby Word Lists by Grady Ward" which I have had for
 
 The Moby list is available [here](http://www.gutenberg.org/files/3201/files/ "Moby Word List"), although this is not the exact version that I have. The particular file that I am using is the 354,984 single words list.
 
-I strip the list of any words that are shorter than 4 (as that is one of the rules of countdown) and greater than 9, I also remove any word that has a capital first letter as it is a proper noun, and any word that has non alphabetical characters such as hyphens or apostrophes.
+I strip the list of any words that are shorter than 4 (as that is one of the rules of countdown) and greater than 9, I also removed the proper nouns by getting them from the Unix Dictionary (which has them capitalised) and putting them into a set (cast to lower case) and then used that set as a filter when parsing the moby list
+
+I also removed any word that has non alphabetical characters such as hyphens or apostrophes as those are also illegal in countdown.
 
 3 - Algorithm
 ---
@@ -55,7 +57,7 @@ I got tired of not knowing what any of the words meant so I threw in a function 
 
 The API I used is located [here](dictionaryapi.net)
 
-This can be tested with 
+This can be tested with
 
 ```sh
 $ python countdown_solver.py <letters>
