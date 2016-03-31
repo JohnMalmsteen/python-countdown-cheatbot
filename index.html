@@ -1,5 +1,6 @@
 <html>
   <head>
+    <title>Countdown Solver</title>
     <style>
       body{
         width: 100%;
@@ -26,8 +27,8 @@
     <div id="main">
       <h3 style="font-family: helvetica">Countdown Solver</h3>
       <form id="solverform">
-        <input id="lettersinput" type="text" name="letters" placeholder="letters..."></input>
-        <input type="button" id="theButton" value="Submit" onclick="makeRequest()"></input>
+        <input id="lettersinput" type="text" maxlength="10" name="letters" placeholder="letters..." style="width: 100px;" pattern="[a-z]"></input><br>
+        <input type="button" id="theButton" value="Submit" onclick="makeRequest()" style="width: 100px;"></input>
       </form>
 
     </div>
