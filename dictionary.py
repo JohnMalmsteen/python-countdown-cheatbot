@@ -3,6 +3,11 @@ import itertools
 
 dictionary = dict()
 
+##
+##  Leaving this stuff in to show how the masterlist.txt was compiled
+##  added bonus of not having to do all the checking when parsing that file
+##
+
 #filter = set()
 #words = set()
 
@@ -48,6 +53,9 @@ for line in file:
         dictionary[myKey] = set([line])
 file.close()
 
+##  I tested this with the dictionary.get(key, default = None) function but
+##  it worked out to be considerably slower than this version, I assume the comparison
+##  to None on the other receiving function was slowing it down
 def checkword(inputword):
     if dictionary.has_key(''.join(sorted(inputword))):
         return dictionary[''.join(sorted(inputword))]
@@ -56,16 +64,18 @@ def checkword(inputword):
 
 def find_largest_anagram(inputword):
     ##print "Input Letters: " + inputword
-    for index in reversed(range(3,len(inputword)+1)):
+    for index in reversed(range(4,len(inputword)+1)):
         combos = itertools.combinations(inputword, index)
         for combo in combos:
             result = checkword(''.join(combo))
             if result != False:
                 return result
 
-    return "No Anagrams Found"
+    return set(["No Anagrams Found"])
 
 def getDefnition(word):
+    if(word.startswith("No Anagrams")):
+        return ""
     import urllib
     import json
     url = "http://dictionaryapi.net/api/definition/%s" % word
@@ -77,13 +87,13 @@ def getDefnition(word):
     except:
         return "No definition found for '%s'" % word
 
-highest = find_largest_anagram(letter_generation.getLettersArray())
+#highest = find_largest_anagram(letter_generation.getLettersArray())
 
-print "Highest Anagram(s): " + str(highest)
+#print "Highest Anagram(s): " + str(highest)
 
-strhighest = highest.pop()
+#strhighest = highest.pop()
 
-print getDefnition(strhighest)
+#print getDefnition(strhighest)
 
 s = """\
 from __main__ import find_largest_anagram
