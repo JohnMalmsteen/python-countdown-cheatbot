@@ -3,31 +3,50 @@ import itertools
 
 dictionary = dict()
 
-filter = set()
-words = set()
+#filter = set()
+#words = set()
 
-filter_file = open('words/wordslist.txt', 'r')
-for line in filter_file:
-    if line[0].isupper():
-        line = line.strip().lower()
-        filter.add(line)
-filter_file.close()
+#filter_file = open('words/wordslist.txt', 'r')
+#for line in filter_file:
+#    if line[0].isupper():
+#        line = line.strip().lower()
+#        filter.add(line)
+#filter_file.close()
 
-file = open('words/354984si.ngl', 'r')
+#file = open('words/354984si.ngl', 'r')
+#for line in file:
+#    line = line.strip()
+#    if len(line) > 3 and len(line) < 10 and line.isalpha() and line not in filter:
+#        myKey = ''.join(sorted(line))
+#        words.add(line)
+#        if dictionary.has_key(myKey):
+#            dictionary[myKey].add(line)
+#        else:
+#            dictionary[myKey] = set([line])
+#file.close()
+
+#outfile = open('words/masterlist.txt', 'w')
+#for elem in words:
+#    outfile.write(elem + '\n')
+
+#file = open('words/masterlist.txt', 'r')
+#for line in file:
+#    line = line.strip()
+#    myKey = ''.join(sorted(line))
+#    if dictionary.has_key(myKey):
+#        dictionary[myKey].add(line)
+#    else:
+#        dictionary[myKey] = set([line])
+
+file = open('words/masterlist.txt', 'r')
 for line in file:
     line = line.strip()
-    if len(line) > 3 and len(line) < 10 and line.isalpha() and line not in filter:
-        myKey = ''.join(sorted(line))
-        if dictionary.has_key(myKey):
-            dictionary[myKey].add(line)
-            words.add(line)
-        else:
-            dictionary[myKey] = set([line])
+    myKey = ''.join(sorted(line))
+    if dictionary.has_key(myKey):
+        dictionary[myKey].add(line)
+    else:
+        dictionary[myKey] = set([line])
 file.close()
-
-outfile = open('words/masterlist.txt', 'w')
-for elem in words:
-    outfile.write(elem + '\n')
 
 def checkword(inputword):
     if dictionary.has_key(''.join(sorted(inputword))):
@@ -58,13 +77,13 @@ def getDefnition(word):
     except:
         return "No definition found for '%s'" % word
 
-#highest = find_largest_anagram(letter_generation.getLettersArray())
+highest = find_largest_anagram(letter_generation.getLettersArray())
 
-#print "Highest Anagram(s): " + str(highest)
+print "Highest Anagram(s): " + str(highest)
 
-#strhighest = highest.pop()
+strhighest = highest.pop()
 
-#print getDefnition(strhighest)
+print getDefnition(strhighest)
 
 s = """\
 from __main__ import find_largest_anagram
