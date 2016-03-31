@@ -84,13 +84,13 @@ $ python dictionary.py
 
 6 - References
 ---
-[Flask](http://flask.pocoo.org/docs/0.10/quickstart/)
-[Python Data Structures (sets, lists, dicts)](https://docs.python.org/2/tutorial/datastructures.html)
-[Itertools (combinations)](https://docs.python.org/2/library/itertools.html#itertools.combinations)
-[Python in Built Functions (sorted, join etc)](https://docs.python.org/2/library/functions.html)
-[How to sort a string](https://wiki.python.org/moin/HowTo/Sorting)
-[Python File I/O](http://www.pythonforbeginners.com/files/reading-and-writing-files-in-python)
-[Countdown Rules](https://en.wikipedia.org/wiki/Countdown_(game_show))
+* - [Flask](http://flask.pocoo.org/docs/0.10/quickstart/)
+* - [Python Data Structures (sets, lists, dicts)](https://docs.python.org/2/tutorial/datastructures.html)
+* - [Itertools (combinations)](https://docs.python.org/2/library/itertools.html#itertools.combinations)
+* - [Python in Built Functions (sorted, join etc)](https://docs.python.org/2/library/functions.html)
+* - [How to sort a string](https://wiki.python.org/moin/HowTo/Sorting)
+* - [Python File I/O](http://www.pythonforbeginners.com/files/reading-and-writing-files-in-python)
+* - [Countdown Rules](https://en.wikipedia.org/wiki/Countdown_(game_show))
 
 
 <a href="https://github.com/JohnMalmsteen"><img src="https://avatars1.githubusercontent.com/u/7085486?v=3&s=400" width="100px" height="100px" title="John" alt="John Image"/></a>
