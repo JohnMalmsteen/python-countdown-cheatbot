@@ -37,7 +37,6 @@
     <script>
       function makeRequest(){
         var value =  $("#lettersinput").val();
-
         if(value !== "" && value !== undefined && value !== null){
           $.ajax({
             method: 'get',
@@ -55,6 +54,11 @@
 
         }
       }
+
+      $("#solverform").on('submit', function (e) {
+       makeRequest();
+       e.preventDefault();
+    });
     </script>
 
   </body>
