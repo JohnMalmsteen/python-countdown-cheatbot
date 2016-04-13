@@ -56,7 +56,7 @@ To produce these combinations I used [itertools.combinations(iterable, r)](https
 ---
 I got tired of not knowing what any of the words meant so I threw in a function that queries a rest API to try and find the definition, I found that even then a lot of the words were not known on that API so I suppose their dictionary isn't that extensive.
 
-The API I used is located [here](dictionaryapi.net)
+The API I used is located [here](http://www.dictionaryapi.net)
 
 This can be tested with
 
